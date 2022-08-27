@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# generate files
+*.cmake
+Makefile*
+*.json
+*/build
+build

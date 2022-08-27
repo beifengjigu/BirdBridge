@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16.1)
+project(bridgeserver VERSION 0.1)
+include_directories(. ./server/include)
+add_subdirectory(server)
+aux_source_directory(. DIRSRC)
+add_executable(${PROJECT_NAME} ${DIRSRC})
+target_link_libraries(${PROJECT_NAME} bridge ssl sqlite3)
+target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_BINARY_DIR})
